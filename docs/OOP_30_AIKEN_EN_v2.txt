@@ -1,0 +1,209 @@
+OOP stands for __________
+A. Object-Operational Programming
+B. Open Object-based Programming
+C. Object-Oriented Programming
+D. Object-Driven Programming
+ANSWER: C
+
+In Object-Oriented Programming, an object contains __________
+A. Only data and constants
+B. Only methods and functions
+C. Both data and methods together
+D. Only functions and modules
+ANSWER: C
+
+What problem often occurs as a procedural program becomes very large?
+A. The program starts running faster
+B. Data and functions become harder to manage
+C. Loops stop executing correctly
+D. Variables lose their assigned values
+ANSWER: B
+
+Which of the following is an advantage of OOP?
+A. Data and methods are grouped in a class
+B. Functions cannot be used in code
+C. Programs work without any variables
+D. Scaling of code is not possible
+ANSWER: A
+
+Which set of principles describes Object-Oriented Programming?
+A. Inheritance, Polymorphism, Recursion
+B. Encapsulation, Inheritance, Polymorphism, Abstraction
+C. Encapsulation, Inheritance, Recursion, Compilation
+D. Polymorphism, Modularity, Abstraction, Compilation
+ANSWER: B
+
+Which OOP principle allows a child class to receive attributes and methods from a parent?
+A. Polymorphism
+B. Abstraction
+C. Inheritance
+D. Encapsulation
+ANSWER: C
+
+Which OOP principle allows the same method name to behave differently in different classes?
+A. Encapsulation
+B. Inheritance
+C. Abstraction
+D. Polymorphism
+ANSWER: D
+
+What is a class in OOP?
+A. A specific created object
+B. A blueprint for creating objects
+C. A built-in Python module
+D. A named program variable
+ANSWER: B
+
+What is an object in OOP?
+A. A template for other classes
+B. A built-in system module
+C. A specific instance of a class
+D. A type of abstract method
+ANSWER: C
+
+Which method is automatically executed when a new object is created in Python?
+A. __start__
+B. __create__
+C. __newobject__
+D. __init__
+ANSWER: D
+
+What does self refer to inside a class method?
+A. The name of the current class
+B. The current object instance
+C. A global program variable
+D. The name of the called method
+ANSWER: B
+
+In Python class methods, the parameter self must be __________
+A. The last in the list
+B. An optional parameter
+C. The first parameter
+D. Used only in __init__
+ANSWER: C
+
+What is a class attribute in Python?
+A. An attribute of one specific object
+B. An attribute defined through self
+C. An attribute shared by all objects
+D. An attribute that is read-only
+ANSWER: C
+
+If species is a class attribute of Dog, how can it be accessed?
+A. Only through self.species
+B. Only through Dog.species
+C. Only through __species
+D. Through Dog.species or object d1.species
+ANSWER: D
+
+What is encapsulation in OOP?
+A. Inheriting methods from a parent
+B. Combining data and controlling access
+C. Creating many objects at once
+D. Calling methods through polymorphism
+ANSWER: B
+
+What does a single underscore attribute such as _name mean in Python?
+A. The attribute is fully private
+B. The attribute is fully public
+C. The attribute is protected by convention
+D. The attribute is abstract
+ANSWER: C
+
+What does a double underscore attribute such as __name mean in Python?
+A. The attribute is fully public
+B. The attribute is private to the class
+C. The attribute is fully protected
+D. The attribute is read-only
+ANSWER: B
+
+The double underscore attribute __balance in Python means __________
+A. The attribute is public to all classes
+B. The attribute is accessible in subclasses
+C. The attribute is private via name mangling
+D. The attribute is used for reading only
+ANSWER: C
+
+What are getters and setters used for in OOP?
+A. Reading and modifying private attributes
+B. Creating and deleting new classes
+C. Declaring abstract class methods
+D. Defining shared class attributes
+ANSWER: A
+
+What happens when code outside the class accesses acc.__balance directly?
+A. The balance value is printed out
+B. The method returns the value zero
+C. An AttributeError is raised
+D. The method returns the value None
+ANSWER: C
+
+Which syntax correctly declares Dog as a child class of Animal in Python?
+A. class Dog -> Animal:
+B. class Dog extends Animal:
+C. class Dog(Animal):
+D. class Dog : Animal:
+ANSWER: C
+
+What is super().__init__() used for in a child class?
+A. To create a completely new class
+B. To call the parent class constructor
+C. To delete the current object
+D. To call an abstract class method
+ANSWER: B
+
+What is method overriding in OOP?
+A. Creating a method with another name
+B. New implementation of a method in a child class
+C. Completely removing the parent method
+D. Copying a method without any changes
+ANSWER: B
+
+What does the class declaration Triathlete(Swimmer, Runner) demonstrate?
+A. The principle of data encapsulation
+B. The principle of class abstraction
+C. The principle of method polymorphism
+D. Multiple inheritance of classes
+ANSWER: D
+
+The word polymorphism means __________
+A. One single unique object
+B. Many different possible forms
+C. Completely hidden program data
+D. A shared method for classes
+ANSWER: B
+
+Iterating over a list of objects and calling the same method on each demonstrates __________
+A. The principle of data encapsulation
+B. The principle of class abstraction
+C. Only the principle of inheritance
+D. The principle of method polymorphism
+ANSWER: D
+
+Which module is used to create abstract classes in Python?
+A. abstractmethod
+B. collections.abc
+C. abc
+D. typing
+ANSWER: C
+
+When a child class defines a method with the same name as in the parent, then __________
+A. The child class method is ignored
+B. The interpreter raises an error
+C. The parent method gets overridden
+D. Both methods are called together
+ANSWER: C
+
+If class C inherits B, and B inherits A, and only B defines hello(), what does C().hello() return?
+A. The result of class A method
+B. The result of class B method
+C. The method returns value None
+D. The interpreter raises an error
+ANSWER: B
+
+How is an instance of a class created in Python?
+A. Using the keyword new
+B. Using the keyword create
+C. Using the keyword instance
+D. By calling the class name directly
+ANSWER: D
