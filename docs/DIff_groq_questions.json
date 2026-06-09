@@ -68,8 +68,8 @@
         "v(t) = 10t + 32",
         "v(t) = -30t - 32"
       ],
-      "ans": "A",
-      "solution": "The acceleration due to gravity is g = -32 ft/sec^2 (negative because it's downward). The initial velocity is 30 ft/sec (positive because it's upward, but since it's dropped it will be downward). Using v(t) = v0 + at, we get v(t) = 30 - 32t.",
+      "ans": "B",
+      "solution": "The acceleration due to gravity is g = 32 ft/sec^2. The initial velocity is 30 ft/sec (positive because it's upward, but since it's dropped it will be downward). Using v(t) = v0 + at, we get v(t) = 30 + 32t.",
       "source_page": 6
     },
     {
