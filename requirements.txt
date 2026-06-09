@@ -4,11 +4,11 @@ python-docx
 pandas
 requests
 pypdfium2
-winrt-runtime
-winrt-Windows.Foundation
-winrt-Windows.Foundation.Collections
-winrt-Windows.Globalization
-winrt-Windows.Graphics.Imaging
-winrt-Windows.Media.Ocr
-winrt-Windows.Storage
-winrt-Windows.Storage.Streams
+winrt-runtime; sys_platform == "win32"
+winrt-Windows.Foundation; sys_platform == "win32"
+winrt-Windows.Foundation.Collections; sys_platform == "win32"
+winrt-Windows.Globalization; sys_platform == "win32"
+winrt-Windows.Graphics.Imaging; sys_platform == "win32"
+winrt-Windows.Media.Ocr; sys_platform == "win32"
+winrt-Windows.Storage; sys_platform == "win32"
+winrt-Windows.Storage.Streams; sys_platform == "win32"
