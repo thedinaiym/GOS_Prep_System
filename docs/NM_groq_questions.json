@@ -8,20 +8,20 @@
         "0.33",
         "All of the above"
       ],
-      "ans": "D",
-      "solution": "All of the given options (0.3, 0.34, 0.33) are approximations of 1/3. The exact value of 1/3 is 0.333..., so all are close and can be considered best approximations depending on rounding.",
+      "ans": "C",
+      "solution": "The exact value of 1/3 is 0.33333... Absolute error for 0.3: |0.33333 - 0.3| = 0.03333. Absolute error for 0.34: |0.33333 - 0.34| = 0.00667. Absolute error for 0.33: |0.33333 - 0.33| = 0.00333. The smallest error belongs to 0.33, so the correct answer is C.",
       "source_page": 1
     },
     {
       "q": "Which of the following statements correctly describes the applicability and properties of the Trapezoidal Rule, Simpson's 1/3 Rule, and Simpson's 3/8 Rule for numerical integration?",
       "opts": [
         "The Trapezoidal Rule approximates the integrand using straight-line segments, Simpson's 1/3 Rule requires an even number of subintervals, and Simpson's 3/8 Rule requires the number of subintervals to be a multiple of 3.",
-        "The Trapezoidal Rule is more accurate than both Simpson's rules for smooth functions, and all three rules require the same number of subintervals.",
-        "The Trapezoidal Rule uses quadratic interpolation, Simpson's 1/3 Rule requires an odd number of subintervals, and Simpson's 3/8 Rule requires any number of subintervals.",
-        "Simpson's 1/3 Rule and Simpson's 3/8 Rule are both based on linear interpolation, while the Trapezoidal Rule is based on cubic polynomials."
+        "The Trapezoidal Rule is more accurate than both Simpson's rules for smooth functions.",
+        "The Trapezoidal Rule uses quadratic interpolation.",
+        "Simpson's 1/3 Rule and Simpson's 3/8 Rule are both based on linear interpolation."
       ],
       "ans": "A",
-      "solution": "The Trapezoidal Rule approximates the integrand using straight-line segments, which is true. Simpson's 1/3 Rule indeed requires an even number of subintervals to apply, as it fits parabolic segments (quadratic interpolation) over pairs of subintervals. Simpson's 3/8 Rule requires the number of subintervals to be a multiple of 3, as it uses cubic interpolation over 3 subintervals at a time.",
+      "solution": "By standard mathematical definition, the Trapezoidal Rule uses first-order linear straight-line segments. Simpson's 1/3 Rule approximates segments with parabolas and requires an even number of intervals n. Simpson's 3/8 Rule uses cubic polynomials and requires n to be a multiple of 3. Therefore the correct answer is A.",
       "source_page": 2
     },
     {
@@ -30,14 +30,14 @@
         "Reconstructing a function f(x) when it is not given explicitly, using only the values of f(x) and/or its derivatives at a set of points.",
         "Approximating a function f(x) by an interpolating polynomial p(x), so that operations such as root finding, differentiation, and integration can be performed more easily using p(x).",
         "Creating smooth curves and surfaces in computer graphics using a small number of control points.",
-        "None of the above"
+        "All of the above"
       ],
       "ans": "D",
-      "solution": "All the provided options A, B, and C are indeed uses of interpolation or interpolating polynomials. Option A discusses reconstructing a function from given points, which is a fundamental use of interpolation. Option B talks about approximating a function for easier computation, which is also a key application. Option C mentions creating smooth curves and surfaces, a common application in computer graphics. Since all the individual options A, B, and C are correct uses of interpolation, the correct answer is D, 'All of the above'.",
+      "solution": "Interpolation serves all of these roles across scientific computing, software design, and graphic engineering. Therefore the correct answer is D, All of the above.",
       "source_page": 3
     },
     {
-      "q": "The following table gives the values of tan x for 0.10 <= x <= 0.30. Find tan 0.12.",
+      "q": "Given the table values of tan x for 0.10 <= x <= 0.30, find tan 0.12.",
       "opts": [
         "-0.1502",
         "2.1205",
@@ -45,7 +45,7 @@
         "0.1205"
       ],
       "ans": "D",
-      "solution": "Using linear interpolation: tan 0.12 = 0.1003 + (0.1511 - 0.1003) * (0.12 - 0.10) / (0.15 - 0.10) = 0.1003 + 0.0508 * 0.02 / 0.05 = 0.1003 + 0.02032 = 0.12062, rounding this to 4 decimal places gives approximately 0.1206, which is closest to 0.1205.",
+      "solution": "Using linear interpolation between x0 = 0.10 and x1 = 0.15, with y0 = 0.1003 and y1 = 0.1511: y = y0 + ((y1 - y0)/(x1 - x0))(x - x0) = 0.1003 + ((0.1511 - 0.1003)/(0.15 - 0.10))(0.12 - 0.10) = 0.1003 + (0.0508/0.05)(0.02) = 0.12062. The closest option is 0.1205, so the correct answer is D.",
       "source_page": 4
     },
     {
@@ -54,15 +54,14 @@
         "Because many real-world mathematical problems cannot be solved exactly using analytical methods.",
         "Because the exact solutions of some problems lie beyond our current state of knowledge.",
         "Some problems may be solvable in theory, but are too lengthy or tedious to handle by hand.",
-        "All of the above",
-        "None of the above"
+        "All of the above"
       ],
       "ans": "D",
-      "solution": "All the given options A, B, and C are valid reasons for studying numerical methods. Option A addresses problems that are inherently unsolvable by analytical methods. Option B considers the limitations of current knowledge. Option C discusses problems that are solvable in theory but impractical to solve manually. Since D encompasses all of the above, it is the correct answer.",
+      "solution": "All choices describe core practical motivations for implementing numerical approximation techniques, so the correct answer is D.",
       "source_page": 5
     },
     {
-      "q": "Compute an approximate value of integral from 0 to 1 of sqrt(x^4 + 1) dx using Simpson's 1/3 rule with n = 10.",
+      "q": "Compute an approximate value of integral from 0 to 1 of sqrt(x^4 + 1) dx using Simpson's 1/3 rule with n=10.",
       "opts": [
         "1.08943",
         "0.03631",
@@ -70,23 +69,23 @@
         "None of the above"
       ],
       "ans": "A",
-      "solution": "Simpson's 1/3 rule is applied with n=10. The approximate value of the integral from 0 to 1 of sqrt(x^4 + 1) dx is 1.08943.",
+      "solution": "The function f(x) = sqrt(x^4 + 1) is smooth and increases from f(0) = 1 to f(1) = sqrt(2) approximately 1.414. The definite integral must therefore be between 1 and 1.414. Applying Simpson's 1/3 rule with n = 10 gives approximately 1.08943, so the correct answer is A.",
       "source_page": 6
     },
     {
-      "q": "The effect of temperature on resistance was recorded by a student in the laboratory and is shown as follows. Find the resistance R at T = 25°C.",
+      "q": "Find the resistance R at T = 25 degrees C from the data T: 20, 30, 40, 50 and R: 76, 83, 88, 94.",
       "opts": [
         "75.9357",
         "72.3752",
         "78.2315",
         "79.9375"
       ],
-      "ans": "A",
-      "solution": "To find the resistance R at T = 25°C, we first need to determine the relationship between temperature and resistance from the given data points: (20, 76), (30, 83), (40, 88), (50, 94). We can assume a linear relationship for simplicity. The change in resistance (ΔR) over the change in temperature (ΔT) can be calculated to find the slope (m) of the line. Using the first and last points: m = ΔR / ΔT = (94 - 76) / (50 - 20) = 18 / 30 = 0.6 Ω/°C. Now, using the point-slope form of the line equation R = mT + b, and substituting m = 0.6 and the point (20, 76): 76 = 0.6*20 + b => 76 = 12 + b => b = 64. So, the equation is R = 0.6T + 64. At T = 25°C, R = 0.6*25 + 64 = 15 + 64 = 79. However, my calculation approach was illustrative; let's correct that with proper interpolation or a more accurate method. A more accurate approach is to use linear interpolation between 20°C and 30°C: R at 25°C = 76 + (83-76)*(25-20)/(30-20) = 76 + 7*5/10 = 76 + 3.5 = 79.5. Among the given options, 75.9357 is closest to a reasonable interpolation between the given points, suggesting a potential miscalculation in the linear model. The correct answer, based on provided choices and assuming a need for a precise calculation or interpolation, would align with option A.",
+      "ans": "D",
+      "solution": "Using Newton Forward Difference interpolation with h = 10: y0 = 76, Delta y0 = 83 - 76 = 7, Delta^2 y0 = (88 - 83) - 7 = -2, and Delta^3 y0 = [(94 - 88) - 5] - (-2) = 3. For T = 25, u = (25 - 20)/10 = 0.5. Then y = y0 + u Delta y0 + u(u - 1) Delta^2 y0 / 2! + u(u - 1)(u - 2) Delta^3 y0 / 3! = 76 + 0.5(7) + (0.5)(-0.5)(-2)/2 + (0.5)(-0.5)(-1.5)(3)/6 = 79.9375. The correct answer is D.",
       "source_page": 7
     },
     {
-      "q": "Given the following data, find d^2y/dx^2 at x = 10 using numerical differentiation.",
+      "q": "Given the data x: 2, 4, 6, 8, 10 and y: 6, 18, 39, 66, 102, find d^2y/dx^2 at x = 10 using numerical differentiation.",
       "opts": [
         "8.75",
         "17.5",
@@ -94,7 +93,7 @@
         "4.375"
       ],
       "ans": "D",
-      "solution": "To find d^2y/dx^2 at x = 10, we first need to find the first and second derivatives using numerical differentiation. Given data points: (2,6), (4,18), (6,39), (8,66), (10,102). We can use the backward difference formula for the second derivative: d^2y/dx^2 = (y_i - 2y_(i-1) + y_(i-2)) / h^2, where h is the step size. Here, we can consider h = 2 (from the given data points). For x = 10, using the last three points (10,102), (8,66), (6,39): d^2y/dx^2 = (102 - 2*66 + 39) / 2^2 = (102 - 132 + 39) / 4 = 9 / 4 = 2.25. However, this approach seems to have been misapplied. A more accurate approach involves using the central difference formula or ensuring correct application of boundary conditions. The correct approach should involve finding the first derivative at two points and then differentiating again. For simplicity and adherence to common numerical methods, let's correct and simplify: The correct formula for second derivative using central differences is d^2y/dx^2 = (y_(i+1) - 2y_i + y_(i-1)) / h^2. Applying it directly at x=10 with correct values: At x=10, y=102; at x=8, y=66; at x=6, y=39; h=2. So, d^2y/dx^2 at x=10 = (102 - 2*66 + 39) / 2^2 = 4.375.",
+      "solution": "Since x = 10 is the final boundary point, use the Newton Backward Difference derivative formula at xn = 10 with h = 2. The backward differences are nabla yn = 102 - 66 = 36, nabla^2 yn = 36 - (66 - 39) = 9, nabla^3 yn = 9 - (39 - 18 - 12) = 3, and nabla^4 yn = 6. Then y''(xn) = (1/h^2)[nabla^2 yn + nabla^3 yn + (11/12)nabla^4 yn] = (1/4)[9 + 3 + (11/12)(6)] = 17.5/4 = 4.375. The correct answer is D.",
       "source_page": 8
     },
     {
@@ -105,20 +104,20 @@
         "Data errors",
         "All of the above"
       ],
-      "ans": "D",
-      "solution": "The main source of error in obtaining numerical solutions to mathematical problems can stem from multiple factors. Round-off errors occur due to the limitations of computer precision in representing real numbers. Truncation errors arise from the approximation of infinite processes by finite ones, such as approximating a derivative or an integral. Data errors come from inaccuracies in the initial conditions or input data. Given that all these options contribute significantly to the overall error in numerical solutions, the most comprehensive and correct answer would encompass all of them.",
+      "ans": "B",
+      "solution": "While all listed errors can affect a numerical result, truncation error is the core mathematical source introduced when an exact infinite or continuous process is replaced by a finite or discrete approximation. Therefore the correct answer is B.",
       "source_page": 9
     },
     {
-      "q": "If the number 3.14159 is rounded off to three decimal places, the relative error produced is",
+      "q": "If the number 3.14159 is rounded off to three decimal places, the relative error produced is:",
       "opts": [
         "-0.00013",
         "0.00013",
         "0.0013",
         "0.00041"
       ],
-      "ans": "B",
-      "solution": "The original number is 3.14159. When rounded off to three decimal places, it becomes 3.142. The absolute error is |3.142 - 3.14159| = 0.00041. The relative error is 0.00041 / 3.14159 = 0.00013.",
+      "ans": "A",
+      "solution": "The true value is 3.14159 and the rounded value to three decimal places is 3.142. Absolute error, using true value minus rounded value, is 3.14159 - 3.142 = -0.00041. Relative error = -0.00041 / 3.14159 approximately -0.0001305. The correct answer is A.",
       "source_page": 10
     },
     {
@@ -129,23 +128,23 @@
         "The rate of convergence for both methods is always identical."
       ],
       "ans": "B",
-      "solution": "The statement that the Jacobi method always converges faster than the Gauss-Seidel method is not true. In general, the Gauss-Seidel method converges faster than the Jacobi method for many systems, but there are cases where the Jacobi method may converge faster or they may have similar performance.",
+      "solution": "False. The Gauss-Seidel method updates and uses newly calculated elements during the current iteration immediately, which usually makes it converge faster than the Jacobi method when both methods are applicable. The correct answer is B.",
       "source_page": 11
     },
     {
-      "q": "Given the following table, find dy/dx at x = 4 using numerical differentiation.",
+      "q": "Given the data x: 2, 4, 6, 8, 10 and y: 6, 18, 39, 66, 102, find dy/dx at x = 4 using numerical differentiation.",
       "opts": [
         "8.75",
         "17.5",
         "4.375",
         "7.85"
       ],
-      "ans": "B",
-      "solution": "To find dy/dx at x = 4, we can use the central difference formula: dy/dx = (y(x + h) - y(x - h)) / (2 * h), where h is the step size. From the table, at x = 4, y = 18; at x = 2, y = 6; and at x = 6, y = 39. The step size h = 2. So, dy/dx at x = 4 = (39 - 6) / (2 * 2) = 33 / 4 = 8.25. However, using the backward or forward difference might give a closer approximation with the given options. Let's try the backward difference: dy/dx = (y(x) - y(x - h)) / h = (18 - 6) / 2 = 12 / 2 = 6 or forward difference: dy/dx = (y(x + h) - y(x)) / h = (39 - 18) / 2 = 21 / 2 = 10.5. A more accurate approach would use (y(x + h) - y(x - h)) / 2h which we already calculated as 8.25. Among the provided options, 8.75 seems closest to a possible calculation error in quick estimation or using a different formula, thus B. 17.5 seems too high, C. 4.375 too low, and D. 7.85 also not fitting well. Given typical numerical differentiation and possible rounding, A. 8.75 seems a reasonable estimation.",
+      "ans": "A",
+      "solution": "Using Newton Forward Difference derivative formula from base x0 = 2 with h = 2, the target x = 4 gives u = (4 - 2)/2 = 1. The differences from x0 are Delta y0 = 12, Delta^2 y0 = 9, Delta^3 y0 = -3, and Delta^4 y0 = 6. Substituting u = 1 gives y'(4) = (1/h)[Delta y0 + (1/2)Delta^2 y0 - (1/6)Delta^3 y0 + (1/12)Delta^4 y0] = (1/2)[12 + 4.5 + 0.5 + 0.5] = 8.75. The correct answer is A.",
       "source_page": 12
     },
     {
-      "q": "What is the minimum number of iterations required in the Bisection Method to attain an accuracy of 10^{-4} if the starting interval is [0, 1]?",
+      "q": "What is the minimum number of iterations required in the Bisection Method to attain an accuracy of 10^-4 if the starting interval is [0, 1]?",
       "opts": [
         "13",
         "14",
@@ -153,7 +152,7 @@
         "Infinity"
       ],
       "ans": "B",
-      "solution": "The Bisection Method reduces the interval length by half with each iteration. Starting with an interval of length 1, to achieve an accuracy of 10^{-4}, we need to find n such that (1/2)^n <= 10^{-4}. Solving for n, we get n >= log2(1/10^{-4}) = 13.287. Therefore, the minimum number of iterations required is 14.",
+      "solution": "The upper bound formula for the required number of bisection iterations is n >= ln((b - a)/epsilon) / ln 2. Here b - a = 1 and epsilon = 10^-4, so n >= ln(10^4) / ln 2 approximately 13.29. Rounding up gives a minimum of 14 iterations. The correct answer is B.",
       "source_page": 13
     },
     {
