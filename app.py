@@ -155,9 +155,12 @@ def parse_extra_docx(path):
 
 def extract_pdf_text(path):
     chunks = []
-    with pdfplumber.open(path) as pdf:
-        for page in pdf.pages:
-            chunks.append(page.extract_text() or "")
+    try:
+        with pdfplumber.open(path) as pdf:
+            for page in pdf.pages:
+                chunks.append(page.extract_text() or "")
+    except Exception:
+        return ""
     return "\n".join(chunks)
 
 
@@ -423,12 +426,12 @@ def groq_extract_scanned_pdfs():
 def load_all_questions():
     oop_aiken = parse_aiken(DOCS_DIR / "OOP_30_AIKEN_EN_v2.txt")
     oop_extra = parse_extra_docx(DOCS_DIR / "oop_extra_tasks_en.docx")
-    nm = parse_pdf_mcq(DOCS_DIR / "NM.pdf")
-    diff = parse_pdf_mcq(DOCS_DIR / "DIff.pdf")
+    nm = load_generated_questions(DOCS_DIR / "NM_groq_questions.json")
+    diff = load_generated_questions(DOCS_DIR / "DIff_groq_questions.json")
     if not nm:
-        nm = load_generated_questions(DOCS_DIR / "NM_groq_questions.json")
+        nm = parse_pdf_mcq(DOCS_DIR / "NM.pdf")
     if not diff:
-        diff = load_generated_questions(DOCS_DIR / "DIff_groq_questions.json")
+        diff = parse_pdf_mcq(DOCS_DIR / "DIff.pdf")
     return {
         "oop_aiken": oop_aiken,
         "oop_extra": oop_extra,
